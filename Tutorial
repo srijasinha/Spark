@@ -1,1 +1,46 @@
+spark is designed to support wide range of task over the same computing engine. It works on master slave architecture.
+Master - It divides the task to diffrent computers(slave)
+For ex - Data scientist, Data Enginner, Data Anylyst all can use the same platform for there modeling and treansformations.
+a)Computing engine - spark is limited to a  computing engine. It doesn't store the data. spark can connect to diffrent data sources HDFS,JDBC,Azure storage etc.
+b)Pallel processing - Parallel computing is a computing architecture that divides a problem into smaller tasks and runs them concurrently.
+c)Apache spark - Apache spark is an unified computing engine and set of libraries for pallel data processing on computer cluster.
 
+Q)Why we need Apache Spark?
+Ans- Earlier we have Database - Oracle,TeraData,MySQL. we can store only Structured data.
+But Now a days - a)data is generated in csv files,test file,json ,image,video etc .To handle these files we don't have any system. 
+b)Volume of data is increased 
+Big Data - 3'V of Big Data - 1)Velocity - 1/hr,1/sec 
+                             2)Variety - structured,semi structured ,un-structured 
+                             3)Volume- 10TB
+10 Tb of data is introduced in 1hr then its a Big data
+ETL happens before Data Ware house concept , but now ELT happens(Data Lake)
+ Note -***Issue - 1)Storage issue of data
+                  2)Processing - A)RAM B)CPU
+To solve this issue we have two options
+a)Monolithhic appoch - To make a computer system big (To scale up hardware, but it has maximum capacity) - vertical scaling,Expensive, Low  avaibility
+b)Disributed approch -Horizonal Scaling, High availbilty,Economical
+
+To solve distributed system approch Hadoop came abfter that spark came
+Hadoop->Spark
+
+Q)Hadoop and Spark diffrence?
+Ans - Hadoop - a) Hadoop is a framework. It is slower than spark because it writes the data back to disk again and read again from from disk to in-memory.
+b)It work on mapper and reducer
+c)Build for Batch Data Processing
+d)Difficult to write code in Hadoop.Hive was built to make it easier.
+e)Have solid security feature
+f)Fault torerance - It is having block of data and replication factor to handle the faliure.
+
+
+Spark -a)Spark is faster than Hadoop because spark do all the computation in memory.(RAM)
+Ex - Data -- a)Executer - Executer(RAM)
+             b)Executer - Executer(RAM)
+b)Build for Batch as well as Streaming data Processing
+c)Easy to write and debug code.We have interactive shell to develop and test high level and low level API.
+d)Don't have solid security feature.
+e)Uses DAG (Directed Acyclic graph) [its one after another not in cycle] to provide fault tolerance. Ex- Process1 -Process2-Process3 
+If process 2 fails it will create a process 2 again and give, spark knows how data is built for Process2
+                                         
+
+
+       
