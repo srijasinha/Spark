@@ -50,6 +50,45 @@ no of computers(3)(FIFO)
 
 ***Spark clusture **
 Cluster - No of computers connected through Network is called cluster
+Node/computer [Driver program)(spark context)->cluster manager->worker Node(2)
+Driver program (Master) will break the code into smalller tasks.It will send the information to our cluster manager.Cluster Manager will create the worker Nodes(Slaves) bases on information 
+and that worker nodes will actually process our data.This is called master slave architecture.
+Developer needs to run spark application , a developer need - 20 GGB Driver,Executer- 25 GB, No of executer - 5 GB,CPU Core - 5
+Master will say to slave - please create a container(w1) of 5GM RAM 
+container (w1)- 5 GB RAM its called Application Master(pyhton, Pyspark)(main method)(Pyspark driver)--->Internally called jvm method(java)(called application Driver)
+Afer Applicatin master - Executer1(python),E2(JVM)
+
+Q)What is transformation and actions?
+Ans- When we make any process on data then its called transformation.EX- join,Filter,Group By these are transformations.
+There are two types of transformation - 
+1)Wide transformations - Data movement is not done to find any value.(like filter,select,union)
+2)Narrow transformations - Data movement is done to find any value.(to perform group by,join,distincit)
+Actions are like count,show,collect
+
+***DAG -Directed Acyclic Graph 
+DAG is created for each JOB
+Job is created when action is hit
+NOTE - For each action 1 job is created, and for each JOB has its own DAG.
+
+Lazy evaluation ---
+It refers to the strategy where transformations on distributed datasets are not executed immediately
+Instead, Spark builds up a sequence of transformations that are only executed when an action is called. Here’s how it works:
+
+1. Transformation Phase: When you apply transformations (e.g., map, filter) to an RDD/DataFrame/Dataset, 
+Spark doesn’t process the data immediately. Instead, it records these transformations and builds a logical execution plan,
+known as a DAG (Directed Acyclic Graph).
+
+2. Action Phase: The actual computation only occurs when an action (e.g., collect, count,show) is called.
+At this point, Spark takes the DAG, applies various optimizations, and executes the transformations in an efficient manner.
+
+---Spark SQL Engine- 
+SQL,DataFrame,Dataset-->Catylat Optimizer,SQL Spark Engine ---Rdd(Physical Plan)
+4 Phases of Spark sql engine
+1)Anylysis phase
+2)Logical Planning
+3)Physical Planning
+4)Code Generation
+
 
 
                                          
