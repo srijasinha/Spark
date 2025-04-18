@@ -40,6 +40,18 @@ c)Easy to write and debug code.We have interactive shell to develop and test hig
 d)Don't have solid security feature.
 e)Uses DAG (Directed Acyclic graph) [its one after another not in cycle] to provide fault tolerance. Ex- Process1 -Process2-Process3 
 If process 2 fails it will create a process 2 again and give, spark knows how data is built for Process2
+
+***Spark Eco-system***
+Dataframe spark sql - streaming -Ml lib - GraphX - (Libraies High -Level API) - Dtaframe is generated
+Spark core -Python,java,R,Scala (Low lvel API) - RDD is generated
+Spark engine 
+clusture Manager
+no of computers(3)(FIFO)
+
+***Spark clusture **
+Cluster - No of computers connected through Network is called cluster
+
+
                                          
 
 
