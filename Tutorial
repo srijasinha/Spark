@@ -97,6 +97,11 @@ Dataset-Actual data
 We need RDD - 1)Full contron on our data
               2)Unstructured
 
+Q)In Apache Spark both SparkContext and SparkSession serve as entry points to the Spark cluster, but they differ in their purpose and use cases. 
+SparkContext is the foundational entry point for all Spark functionality, particularly for low-level operations with RDDs (Resilient Distributed Datasets). 
+SparkSession, introduced in Spark 2.0, provides a higher-level, unified interface for working with DataFrames and Datasets, and is recommended for most data
+processing tasks.
+
 
 
                                          
