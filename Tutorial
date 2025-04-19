@@ -94,6 +94,8 @@ Data is distributed on cluster and give data is RDD.List got converted in RDD an
 Resilent - In case of falure ,it recovers the data
 Distributed- Data is distributed on cluster and give data.
 Dataset-Actual data
+We need RDD - 1)Full contron on our data
+              2)Unstructured
 
 
 
