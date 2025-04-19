@@ -89,6 +89,12 @@ SQL,DataFrame,Dataset-->Catylat Optimizer,SQL Spark Engine ---Rdd(Physical Plan)
 3)Physical Planning
 4)Code Generation
 
+--RDD-Resilent Distributed DataSet -Its a Data structure in spark.It is immutable (cant get changed).It is lazy optimization
+Data is distributed on cluster and give data is RDD.List got converted in RDD and dristributed on multiple cluster.
+Resilent - In case of falure ,it recovers the data
+Distributed- Data is distributed on cluster and give data.
+Dataset-Actual data
+
 
 
                                          
