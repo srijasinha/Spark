@@ -102,6 +102,16 @@ SparkContext is the foundational entry point for all Spark functionality, partic
 SparkSession, introduced in Spark 2.0, provides a higher-level, unified interface for working with DataFrames and Datasets, and is recommended for most data
 processing tasks.
 
+----Below steps indicates the workflow of Spark SQL execution
+
+1)JDBC/ODBC and console clients like spark shell execute a Spark SQL query using DataFrame/Dataset API
+2)Data in DataFrame/Dataset gets processed and optimized using catalyst optimizer
+3)Catalyst optimizer executes the query to a physical plan, optimizes and compiles parts of queries to Java byte code
+4)The optimized byte code constructs RDDs as per the query plan which eventually gets executed within Spark engine as a DAG
+5)The output will be persisted as a file format supported by data source API
+
+
+
 
 
                                          
