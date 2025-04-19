@@ -124,6 +124,12 @@ processing tasks.
 3)Default file format supported by Spark Framework
 4)Spark SQL offers API functions to read/write parquet files
 
+----Avro file format--
+1)Avro file format provides high performance in read, write operations and optimized storage in compressed format.
+2)Uses JSON to define datatypes and protocols. JSON is the standard serialization component, across businesses for representing data.
+3)Avro serialize data in a binary format with the help of JSON. 
+4)Spark SQL supports reading and writing Avro files using the spark-avro library
+
 
 
 
