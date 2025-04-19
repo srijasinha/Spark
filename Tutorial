@@ -110,6 +110,21 @@ processing tasks.
 4)The optimized byte code constructs RDDs as per the query plan which eventually gets executed within Spark engine as a DAG
 5)The output will be persisted as a file format supported by data source API
 
+---Below steps explains the workflow of catalyst optimizer-
+
+1)Analyzing a logical plan with the metadata
+2)Optimizing the logical plan
+3)Creating multiple physical plans
+4)Analyzing the plans and find the most optimal physical plan
+5)Converting the physical plan to RDDs
+
+----Parquet file--
+1)Columnar file format supported across many data processing systems. Provides better performance while storing and processing data
+2)Stores schema details along with the data in the file
+3)Default file format supported by Spark Framework
+4)Spark SQL offers API functions to read/write parquet files
+
+
 
 
 
