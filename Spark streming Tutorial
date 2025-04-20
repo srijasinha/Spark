@@ -7,3 +7,14 @@ Streaming use case -
 Amazon detecting if order is placed is Fraud?
 
 order strem --Order Fraud Detection --order Acepted or cancelled
+
+---Features of Spark Streaming---
+
+1)It is one of the key module of Apache Spark framework
+2)It is an open source, distributed framework that provides an efficient way to deal with real-time data processing
+3)It provides set of programming APIs to collect and process live continual data
+4)The applications can be written using Java, Scala or Python
+5)Spark Core, SQL and Machine learning algorithms can be applied on the continuous streams
+6)Support for structured data streaming where data streams can be treated as tables
+
+
