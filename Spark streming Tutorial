@@ -17,4 +17,52 @@ order strem --Order Fraud Detection --order Acepted or cancelled
 5)Spark Core, SQL and Machine learning algorithms can be applied on the continuous streams
 6)Support for structured data streaming where data streams can be treated as tables
 
+--sequence of RDD-
+stream of events divided in Batch interval - 10 sec each (Divided in 3 streams)
+
+--Spark streaming context -
+1)Entry point of Streaming Application
+2)Manages your Streaming Application
+
+--DStreams
+Discretized Stream (DStream) is defined as the fundamental abstraction available from Spark streaming-
+1)It is the data received from the source as continuous streams
+2)DStream can be represented as a series of RDDs where each RDD is the data collected in a defined time interval
+3)DStreams can be created by either applying high-level operations on other Dstreams or by using input data streams from the source
+4)All operations that are applied on a DStream get translated into operations on the underlying RDDs
+
+***Receivers-
+stream--->Reciever(after a specefic interval of time reciever creates a interval of 5 second, from that input new RDD will be created,
+input RDD is called Dstream )->spark streaminng
+
+1)Spark Streaming launches a Receiver for each input data source
+2)Receivers are the tasks running in the specific application executors
+3)Receivers collect the data from input data source and store it as RDD
+4)Receivers replicate these RDDs for fault tolerance. Spark Streaming provides the way of managing lineage of RDDs which can
+be used to recompute in case of failures.
+5)For an application to receive data in parallel from various streams, multiple input DStreams can be created. 
+This requires sufficient cores for processing the data received and also to run the receivers
+
+***Below are few core operations that can be applied on DStreams---
+
+1)map(function) - Creates a new DStream by passing each message in the source DStream through a user defined function
+
+2)flatMap(function) - Similar operation as map() but each input item can be mapped to 0, 1 or more output items
+
+3)filter(function) - Creates a new DStream by filtering the records of the source DStream on which function returns true
+
+4)repartition(new number of Partitions) - Modifies the degree of parallelism by changing the number of partitions
+
+5)union(other DStream) - New DStream will be created by union of two DStreams
+
+6)reduceByKey(function) - When called on a DStream of (K, V) pairs, returns a new DStream of (K, V) pairs where the values
+for each key are aggregated using the given reduce function
+
+7)join(other DStream, [numTasks]) - When called on two DStreams of (K, V) and (K, W) pairs, returns a new DStream of 
+(K, (V, W)) pairs with all pairs of elements for each key
+
+
+
+
+
 
