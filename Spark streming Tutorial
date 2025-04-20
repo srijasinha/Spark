@@ -1,1 +1,9 @@
+Streaming - It is continious flow of Execution
+EX- 1)Stream of Log MSg
+    2)GPS Location stream of USER cars
+    3)If tweet is event,Continious flow of tweet is Stream of Tweets
 
+Streaming use case -
+Amazon detecting if order is placed is Fraud?
+
+order strem --Order Fraud Detection --order Acepted or cancelled
