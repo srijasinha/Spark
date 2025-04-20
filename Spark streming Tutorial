@@ -61,6 +61,13 @@ for each key are aggregated using the given reduce function
 7)join(other DStream, [numTasks]) - When called on two DStreams of (K, V) and (K, W) pairs, returns a new DStream of 
 (K, (V, W)) pairs with all pairs of elements for each key
 
+***stateless transformations- It is a  process each micro-batch of data independently, without relying on information from previous
+batches.
+Operations- Map(),Filter(),MapPartitions()
+
+***StateFull Transformations -maintain information across micro-batches in Spark Streaming, enabling the use of past data to compute results for
+the current batch.
+
 
 
 
